@@ -55,7 +55,7 @@ Salvador/BA, Brasil
 }{}
 
 % Configurações de aparência do PDF final
-% \usepackage{hyperref} % para inserir links
+\usepackage{hyperref} % para inserir links
  \hypersetup{
       colorlinks=false,       % false: boxed links; true: colored links
       pdfborder={0 0 0},      % remove as bordas ao redor dos links
@@ -74,19 +74,19 @@ Salvador/BA, Brasil
 \begin{document}
 
 \begin{center}
-  \includegraphics[width=0.3\textwidth]{imagens-template/ucsal_logo.png}
+      \includegraphics[width=0.3\textwidth]{imagens-template/ucsal_logo.png}
 \end{center}
 {\let\newpage\relax\maketitle}
 
 \clearpage
 \pagenumbering{arabic} % Retoma a numeração normal
 \begin{resumoumacoluna}
-  \lipsum[1] % Gera um texto de exemplo
+      \lipsum[1] % Gera um texto de exemplo
 
-  \vspace{\onelineskip}
+      \vspace{\onelineskip}
 
-  \noindent
-  \textbf{Palavras-chaves}: Transformação digital, software, inovação.
+      \noindent
+      \textbf{Palavras-chaves}: Transformação digital, software, inovação.
 \end{resumoumacoluna}
 
 \clearpage
@@ -95,34 +95,30 @@ Salvador/BA, Brasil
 
 % Apresentação do Tema, Contextualização 
 \section{Introdução}
-Muitas pessoas pensam que software é simplesmente outra palavra para programas de computador.
-No entanto, quando falamos de engenharia de software, não se trata apenas do programa em si, mas de
-toda a documentação associada e dados de configurações necessários para fazer esse programa operar
-corretamente. A documentação nada mais é que um conjunto de informações que descreve as características, funcionamento, o uso e os requisitos de um software, dando apoio ao processo de construção dele. Desse modo, temos que, a documentação é
-de suma importância para o desenvolvimento de um software, servindo para diversos propósitos
+Muitas pessoas pensam que software é simplesmente outra palavra para programas de computador. No entanto, quando falamos de engenharia de software, não se trata apenas do programa em si, mas de toda a documentação associada e dados de configurações necessários para fazer esse programa operar corretamente.
+
+A Documentação descreve cada parte do código-fonte, uma função, uma classe, um trecho ou módulo. Podemos dizer que a documentação consiste em um conjunto de manuais gerais e técnicos, podendo ser organizado em forma de textos e comentários, utilizando ferramentas do tipo dicionários, diagramas e
+fluxogramas, gráficos, desenhos, dentre outros \cite{coelho2009documentaccao}. Desse modo, temos que, a documentação é de suma importância para o desenvolvimento de um software, servindo para diversos propósitos
 como:
 
 \begin{itemize}
-  \item Facilitar o entendimento e a comunicação entre os envolvidos no projeto, como desenvolvedores,
-        clientes, usuários, testadores, gerentes, etc;
-  \item Auxiliar na definição do escopo, dos objetivos e das funcionalidades do software;
-  \item Orientar o desenvolvimento, o teste e a implantação do software;
-  \item Permitir a verificação e a validação da conformidade do software com os requisitos especificados;
-  \item Fornece instruções e orientações para o uso adequado do software pelos usuários finais;
-  \item Apoiar a manutenção e a evolução do software ao longo do tempo.
+      \item Facilitar o entendimento e a comunicação entre os envolvidos no projeto, como desenvolvedores,
+            clientes, usuários, testadores, gerentes, etc;
+      \item Auxiliar na definição do escopo, dos objetivos e das funcionalidades do software;
+      \item Orientar o desenvolvimento, o teste e a implantação do software;
+      \item Permitir a verificação e a validação da conformidade do software com os requisitos especificados;
+      \item Fornece instruções e orientações para o uso adequado do software pelos usuários finais;
+      \item Apoiar a manutenção e a evolução do software ao longo do tempo.
 \end{itemize}
 
 \section{Fundamentos da Documentação de Software}
-Quando falamos sobre documentação de software, estamos nos referindo a qualquer material textual
-que times de engenharia, teste, produto
-e demais profissionais utilizam para realizar o seu trabalho. a documentação deve ser uma descrição
-precisa sobre um sistema de software.
-Quanto maior a precisão desses documentos, maior o status de autoridade que eles podem ter.
-Documentações devem abstrair a tecnicidade de um assunto, seja de implementações,
-configurações, e focar no que é essencial para quem a utilizar, trazendo informações completas e
-imprescindíveis para que se possa alcançar um objetivo e realizar uma ação.
-Existem diversos tipos de documentação, sendo cada tipo útil para situações diferentes:
+Quando falamos sobre documentação de software, estamos nos referindo a qualquer material textual que times de engenharia, teste, produto e demais profissionais utilizam para realizar o seu trabalho. a documentação deve ser uma descrição precisa sobre um sistema de software. Quanto maior a precisão desses documentos, maior o status de autoridade que eles podem ter.
 
+A documentação pode ser dividida em dois grandes grupos: a parte técnica é considerada mais simples, pois descreve o trabalho do desenvolvedor, enquanto
+que a parte para o usuário é a mais exigente e requer habilidades especiais para a redação de manuais, inserção de screenshots, desenhos e outros elementos
+gráficos \cite{coelho2009documentaccao}.
+
+Dentro desses dois grupos existem diversos tipos de documentação, sendo cada tipo útil para situações diferentes, elas são:
 
 \subsection{Documentação Técnica}
 É aquela voltada para os profissionais que participam do projeto,como desenvolvedores, testadores, gerentes, etc. Ela inclui:
@@ -131,7 +127,7 @@ Documentação de requisitos: descreve as necessidades, as expectativas e as res
 como visão geral, especificação funcional, especificação técnica, casos de uso, histórias de usuário.
 
 
-Documentação de projeto: descreve a arquitetura, o design e a estrutura do software. Ela pode
+Documentação de arquitetura/design: descreve a arquitetura, o design e a estrutura do software. Ela pode
 incluir diagramas, modelos, padrões, componentes, interfaces, etc.
 
 
@@ -147,91 +143,105 @@ teste, evidências de teste, etc.
 Documentação de implantação: descreve os procedimentos e as configurações necessárias para
 instalar e executar o software em um ambiente específico. Ela pode incluir guias de instalação
 
+Documentação da API: é uma forma especializada de documentação
+técnica que fornece detalhes sobre como interagir com a API do software. Inclui descrições de
+métodos, parâmetros de entrada, formatos de saída e exemplo.
 
-\subsection{Documentação de usuário}
+\subsection{Documentação de Usuário}
 É um conjunto de de meteriais criados para ajudar os
 usuários a entenderem, instalarem e configurarem um software. Ela é voltada a pessoas
 que não necessariamente têm conhecimento técnico. ela inclui:
 -Guia de início rápido: Passos básicos para a instalação e configuração de um software.
 -Tutoriais Interativos: Passo a passo para tarefas específicas.
 
-\subsection{Documentação de arquitetura/design}
-A documentação de arquitetura ou design fornece um
-modelo da estrutura do software, detalhando os componentes de alto nível, suas interações e os
-padrões de design subjacentes. É crucial para a integração de novos desenvolvedores e para manter
-a consistência em grandes projetos.
+\subsection{Documentação Legal ou de Conformidade}
+É aquela que descreve os aspectos jurídicos ou regulatórios como política de privacidade, termos de uso, licença de software(ex.: GPL, MIT, Apache).
 
-\subsection{Documentação da API}A documentação da API é uma forma especializada de documentação
-técnica que fornece detalhes sobre como interagir com a API do software. Inclui descrições de
-métodos, parâmetros de entrada, formatos de saída e exemplo.
+
+\subsection{Documentação de Processos}
+Está relacionada ao gerenciamento do desenvolvimento do software como: Plano de projeto(Cronogramas, recursos e fases do projeto), relat´rios de status, atas de reunião, etc.
 
 \section{Boas práticas de documentação de software}
 Por fim é necessário ter uma boa prática de documentação para a contrução de um software como:
 
 
 \begin{itemize}
-  \item Definir o público-alvo e o propósito da documentação. A documentação deve ser adaptada às
-        necessidades e ao nível de conhecimento dos leitores, seja eles desenvolvedores, usuários finais,
-        gerentes ou clientes. O propósito da documentação também deve ser claro, seja ele instruir,
-        informar, persuadir ou avaliar.
-  \item Escolher o formato e a ferramenta adequados para a documentação. A documentação pode ser
-        apresentada em diferentes formatos, como texto, diagramas, vídeos, tutoriais ou exemplos de
-        código. A escolha do formato depende do tipo de informação que se quer transmitir, da
-        complexidade do assunto e da preferência do público.
-  \item Seguir um padrão e uma estrutura para a documentação. A documentação deve seguir um padrão
-        de estilo, linguagem e formatação que seja consistente, claro e objetivo. Isso facilita a leitura, a
-        compreensão e a busca pela informação.
-  \item Manter a documentação atualizada e revisada. A documentação deve refletir o estado atual do
-        projeto, as mudanças realizadas e as decisões tomadas
-  \item Obter feedback e melhorar a documentação. A documentação deve ser testada e avaliada pelos
-        leitores para verificar se ela atende às suas expectativas, necessidades e dúvidas.
+      \item Definir o público-alvo e o propósito da documentação. A documentação deve ser adaptada às
+            necessidades e ao nível de conhecimento dos leitores, seja eles desenvolvedores, usuários finais,
+            gerentes ou clientes. O propósito da documentação também deve ser claro, seja ele instruir,
+            informar, persuadir ou avaliar.
+      \item Escolher o formato e a ferramenta adequados para a documentação. A documentação pode ser
+            apresentada em diferentes formatos, como texto, diagramas, vídeos, tutoriais ou exemplos de
+            código. A escolha do formato depende do tipo de informação que se quer transmitir, da
+            complexidade do assunto e da preferência do público.
+      \item Seguir um padrão e uma estrutura para a documentação. A documentação deve seguir um padrão
+            de estilo, linguagem e formatação que seja consistente, claro e objetivo. Isso facilita a leitura, a
+            compreensão e a busca pela informação.
+      \item Manter a documentação atualizada e revisada. A documentação deve refletir o estado atual do
+            projeto, as mudanças realizadas e as decisões tomadas
+      \item Obter feedback e melhorar a documentação. A documentação deve ser testada e avaliada pelos
+            leitores para verificar se ela atende às suas expectativas, necessidades e dúvidas.
 
 \end{itemize}
 São, também, boas práticas para criar um documentação: Clareza e consistência, Abordagem centrada no público, Controle de versão e gerenciamento de mudanças, Colaboração entre equipes.
 Assim a documentação de um software trás diversos benefícios como a melhor qualidade e confiabilidade de um software, a redução dos erros e falhas no funcionamento do software, o aumento de produtividade e a eficiência do desenvolvimento e entrega do software, além de aumentar a satisfação e a fidelização dos clientes e dos usuários. Por fim, cabe ao time de desenvolvimento decidir qual tipo de documentação faz mais sentido ser adotado. Essa decisão deve ser tomada de acordo com o contexto do projeto, as habilidades do time e o perfil de quem vai
-consumir esse conteúdo
+consumir esse conteúdo.
+
+\section{Responsabilidade Civil e Contratos}
+Em um contexto legal, a documentação de software também pode ter implicações
+relacionadas à responsabilidade civil e aos contratos. A documentação pode estabelecer claramente os termos e condições de uso de um software, indicando
+responsabilidades e isenções de responsabilidade. Isso é especialmente importante quando um software é utilizado em ambientes comerciais ou sensíveis.
+Exemplo Prático: Se um software é desenvolvido para uma empresa, o contrato de desenvolvimento pode exigir que a documentação seja fornecida de
+maneira clara e abrangente. Isso ajuda a prevenir disputas legais no futuro,
+como por exemplo, um cliente alegando que o software não está funcionando
+conforme o prometido.
 
 \section{Questões legais}
 
--LGPD(Lei Geral de Proteção de Dados - Brasil):Esta Lei dispõe sobre o tratamento de dados
-pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público
-ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o
-livre desenvolvimento da personalidade
-da pessoa natura. Exigindo que documentações de software incluam políticas de privacidade e
-tratamento de dados.
-2-GDPR(Regulamento Geral de Proteção de Dados):é crucial para o desenvolvimento de software,
-pois garante a proteção de dados pessoais e defende os direitos dos indivíduos, impacta na
-documentação de sistemas que coletam dados de cidadão europeus.
-3-Apache License 2.0: é uma licença de software de código aberto permissiva que permite aos
-usuários usar, modificar e distribuir software livremente, inclusive para fins comerciais. Ele exige
-menção clara na documentação sobre termos de uso modificações e redistribuição.
-4-Creative Commons recomenda: usa licenças de software livre e de código aberto para software,e
-para licenciar documentação técnica.
-5-ISO/IEC 26514:Ele descrevee define requisitos para documentação e como estabelecer quais
-informações os usuários precisam, como determinar o caminho
-que essas informações devem ser apresentadas e como preparar as informações e disponibilizá-las
+A documentação de software e as questões legais estão profundamente interligadas. A documentação não é apenas um recurso técnico para os desenvolvedores, mas também desempenha um papel crucial nas implicações legais que envolvem a criação, distribuição e uso de software. A documentação bem elaborada pode servir como um ponto de referência legal em diversos contextos,
+ajudando a proteger direitos de propriedade intelectual, clarificar responsabilidades e fornecer garantias contratuais.
 
-\section{Desafios e soluções}
-1-MANTER A DOCUMENTAÇÃO ATUALIZADA:Um dos maiores desafios é garantir que a
-documentação reflita o estado atual do software.
-Ferramentas automatizadas e auditorias regulares da documentação podem ajudar a manter as coisas
-atuais.
-2-INCENTIVAR A PARTICIPAÇÃO DOS DEVS:Os desenvolvedores frequentemente veem a
-documentação como uma tarefa.
-Incentivar a participação através de ferramentas colaborativas e integrar a documentação no
-processo de desenvolvimento pode ajudar a aliviar esse problema.
-3-GERENCIAR A "DÍVIDA" DA DOCUMENTAÇÃO:Assim como com o código, a
-documentação pode acumular "dívida"
-ao longo do tempo. Revisar e refatorar regularmente a documentação pode evitar que ela fique
-desatualizada ou redundante.
+\subsection{LGPD (Lei Geral de Proteção de Dados - Brasil)}
+Esta Lei dispõe sobre o tratamento de dados
+pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural. Exigindo que documentações de software incluam políticas de privacidade e tratamento de dados \cite{LGPD}.
+
+\section{Questões Legais Internacionais}
+
+\subsection{GDPR (General Data Protection Regulation)}
+É uma legislação da União Europeia que garante a proteção de dados pessoais e defende os direitos dos indivíduos, se aplica a dados de pessoas localizadas na União Europeia (residentes ou não), impondo regras a organizações que tratam de dados pessoas \cite{GDPR}. Ex.: Uma empresa do Brasil que atende e coleta dados de clientes da Alemanha deve seguir as regras do GDPR.
+
+\subsection{ISO/IEC 26514}Ele descreve e define requisitos para documentação e como estabelecer quais informações os usuários precisam, como determinar o caminho que essas informações devem ser apresentadas e como preparar as informações e disponibilizá-las \cite{ISO26514}.
+
+\section{Licenças de software}
+
+A licença de uso é o instrumento com o qual o titular dos
+direitos do software ou o distribuidor licenciado delimitam o uso, a aplicação e a sua utilidade para o usuário final \cite{nettoquestoes}. Existem diversos tipos de licenças de software, cada uma com suas próprias restrições e obrigações. Alguns exemplos de licenças de software livre e de código aberto incluem:
+
+\subsection{GNU - General Public License (GPL)} Richard M. Stallman, criador da Free Software Foundation em 1984, lançou o projeto GNU que se trata de uma licença de software livre que dá a todos os usuários a liberdade de redistribuir e modificar o software GNU \cite{GPLv3}.
+
+Em vez de colocar o software em domínio público, o Projeto GNU o torna [...] "copyleft"  que diz que qualquer um que distribui o software, com ou sem modificações, tem que passar adiante a liberdade de copiar e modificar novamente o programa. O copyleft garante que todos os usuários possuem liberdade \cite{nettoquestoes}.
+
+\subsection{MIT License}
+É uma licença de software livre que permite aos usuários usar, modificar e distribuir o software livremente, inclusive para fins comerciais além de oferecer proteção contra disputas de patentes. Ela exige apenas a inclusão de um aviso de direitos autorais \cite{MITLicense}.
+
+\subsection{Apache License 2.0}
+É uma licença de software de código aberto que permite aos usuários usar, modificar e distribuir software livremente, inclusive para fins comerciais. Ele exige menção clara na documentação sobre termos de uso modificações e redistribuição \cite{Apache2}.
+
+
+\section{Desafios Legais na Documentação de Software}
+1 - Conformidade com Leis Internacionais: Como mencionado, a conformidade com regulamentações como o GDPR é um dos maiores desafios atuais. A documentação de software precisa ser ajustada para garantir que todas as políticas de privacidade e de proteção de dados estejam adequadas à legislação vigente nos diversos países onde o software é utilizado.
+
+2 - Licenciamento de Software: A documentação de software precisa ser rigorosa na especificação de licenças de uso. Com a proliferação de licenças open-source, como a Apache License ou GNU GPL, é importante que as implicações legais de cada tipo de licença sejam claras na documentação, para garantir que os desenvolvedores e usuários finais compreendam suas permissões e limitações.
+
+3 - Propriedade de Código e Trabalhos Colaborativos: Em projetos colaborativos, especialmente aqueles envolvendo várias empresas ou desenvolvedores independentes, a documentação precisa abordar questões de propriedade intelectual, especificando quem detém os direitos sobre o código-fonte e os recursos criados. Contratos claros e documentação detalhada ajudam a evitar disputas sobre a propriedade do trabalho.
 
 \section{Conclusão}
 A documentação de software é uma parte vital do processo de desenvolvimento de software.
 Ela garante que todas as partes interessadas tenham as informações necessárias para entender,
 usar e manter o software de forma eficaz.
-\citeonline{boulic:91} teste.
 
 
+\newpage
 
 % Formatação da bibliografia
 %bibliographystyle{plain}
